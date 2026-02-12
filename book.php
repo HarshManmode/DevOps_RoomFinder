@@ -31,7 +31,8 @@ if ($_POST) {
         header("Location: index.php");
         exit();
     }
-    
+    // booking validation update
+
     // Check for existing bookings
     $check_booking = mysqli_query($conn, "SELECT * FROM bookings WHERE room_id=$room_id AND 
         ((from_date <= '$from_date' AND to_date > '$from_date') OR 
